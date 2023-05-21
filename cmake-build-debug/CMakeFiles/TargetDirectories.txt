@@ -1,0 +1,3 @@
+C:/Codes/C++/basm/cmake-build-debug/CMakeFiles/basm.dir
+C:/Codes/C++/basm/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Codes/C++/basm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
