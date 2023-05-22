@@ -38,23 +38,12 @@ std::string Lexer::tokenToString(Lexer::Token token) {
     }
 }
 
-Lexer::Lexer(const std::string &InputSourceName) {
-    setInputSource(InputSourceName);
+Lexer::Lexer() {
+    lastWord.reserve(30);
 }
 
 Lexer::~Lexer() {
-    if (inputSource != &std::cin) {
-        delete inputSource;
-    }
-}
-
-void Lexer::setInputSource(const std::string &InputSourceName) {
-    lastWord.reserve(30);
-    if (InputSourceName.empty()) {
-        inputSource = &std::cin;
-    } else {
-        inputSource = new std::ifstream(InputSourceName);
-    }
+    delete inputSource;
 }
 
 void Lexer::advance() {

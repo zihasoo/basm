@@ -23,13 +23,12 @@ public:
         tok_eof,
 
         // keyword
-        tok_fn,
-        tok_import,
+        tok_data,
+        tok_code,
 
         // primary
         tok_identifier,
         tok_int,
-        tok_float,
 
         // control
         tok_if,
@@ -48,13 +47,9 @@ public:
 
     static std::string tokenToString(Token token);
 
-    Lexer() = default;
-
-    Lexer(const std::string &);
+    Lexer();
 
     ~Lexer();
-
-    void setInputSource(const std::string &);
 
     Token getToken(); //현재 입력 스트림에서 토큰 타입(enum) 얻기
 
