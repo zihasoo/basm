@@ -9,16 +9,10 @@ std::string Lexer::tokenToString(Lexer::Token token) {
     switch (token) {
         case Lexer::tok_eof:
             return "tok_eof";
-        case Lexer::tok_fn:
-            return "tok_fn";
-        case Lexer::tok_import:
-            return "tok_import";
         case Lexer::tok_identifier:
             return "tok_identifier";
         case Lexer::tok_int:
             return "tok_int";
-        case Lexer::tok_float:
-            return "tok_float";
         case Lexer::tok_if:
             return "tok_if";
         case Lexer::tok_else:
