@@ -20,9 +20,7 @@ basm
 | 0 1 0 1        | **jb** *label*           | ```jump if below (zf = 0, cf = 1)```         |
 | 0 1 1 0        | **je** *label*           | ```jump if equal (zf = 1, cf = 0)```         |
 | 0 1 1 1        | **jmp** *label*          | ```jump to label (jmp들은 모두 src가 imm이어야 함)``` |
-| 1 0 0 0        | **mov** *mem*, *reg*     | ```mem <- source```                          |
-| 1 0 1 0        | **mov** *reg*, *reg/imm* | ```dest <- source```                         |
-| 1 0 1 1        | **mov** *reg*, *mem*     | ```dest <- mem```                            |
+| 1 0 0 0        | **mov** *reg*, *reg/imm* | ```dest <- source```                         |
 
 ### operand code table
 
