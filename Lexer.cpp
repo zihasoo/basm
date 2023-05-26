@@ -1,18 +1,21 @@
 #include "Lexer.h"
-#include <iostream>
+#include "Logger.h"
+#include "System.h"
 
-using std::cout;
-
-Lexer::Lexer(const string &file_name) : source(file_name), file_name(file_name) {
+Lexer::Lexer() : source(System::source_name){
     last_word.reserve(30);
+    cur_line.reserve(80);
 }
 
 void Lexer::advance() {
     last_char = source.get();
-    if (last_char == '\n' || last_char == '\r') {
+    if (last_char == '\n' || last_char == '\r' || last_char == EOF) {
+        System::main_logger.register_line(cur_loc.first, cur_line);
+        cur_line.clear();
         cur_loc.first++;
-        cur_loc.second = 1;
+        cur_loc.second = 0;
     } else {
+        cur_line.push_back(last_char);
         cur_loc.second++;
     }
 }
@@ -67,7 +70,6 @@ Lexer::Token Lexer::get_token() {
         return tok_op;
     }
 
-    //print_error("undefined token");
     advance();
     return tok_undefined;
 }
@@ -76,57 +78,24 @@ string Lexer::get_word() {
     return last_word;
 }
 
-pair<int, int> Lexer::get_location() {
+pair<int, int> Lexer::get_cur_loc() {
     return cur_loc;
 }
 
-inline string indent_by_digit(int num) {
-    string ret;
-    while (num) {
-        ret.push_back(' ');
-        num /= 10;
-    }
-    return ret;
+pair<int, int> Lexer::get_last_loc() {
+    return last_token_loc;
 }
 
-inline string indent_by_count(int count) {
-    string ret;
-    for (int i = 0; i < count; ++i) {
-        ret.push_back(' ');
-    }
-    return ret;
-}
-
-inline string tilde(int count) {
-    string ret;
-    for (int i = 0; i < count; ++i) {
-        ret.push_back('~');
-    }
-    return ret;
-}
-
-void Lexer::print_error(const string &msg) {
-    int raw = last_token_loc.first, col = last_token_loc.second;
-    cout << file_name << ' ' << raw << ':' << col << ": error: " << msg << '\n'
-         << "    " << raw << " | " << last_word << '\n'
-         << "    " << indent_by_digit(raw) << " | ^" << tilde(last_word.size() - 1)
-         << '\n';
-}
-
-void Lexer::print_symbol(Lexer::Token token) {
-    cout << file_name << last_token_loc.first << ":" << last_token_loc.second
-         << ": token <" << last_word << "> : " << Lexer::token_to_string(token) << '\n';
-}
 
 string Lexer::token_to_string(Token token) {
     switch (token) {
-        case Lexer::tok_eof:
+        case tok_eof:
             return "tok_eof";
-        case Lexer::tok_identifier:
+        case tok_identifier:
             return "tok_identifier";
-        case Lexer::tok_int:
+        case tok_int:
             return "tok_int";
-        case Lexer::tok_undefined:
+        case tok_undefined:
             return "tok_undefined";
         case tok_data:
             return "tok_data";
@@ -154,5 +123,3 @@ string Lexer::token_to_string(Token token) {
             return "tok_op";
     }
 }
-
-
