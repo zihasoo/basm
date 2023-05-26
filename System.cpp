@@ -2,7 +2,7 @@
 
 string System::source_name = string();
 string System::output_name = string();
-Logger System::main_logger = Logger();
+Logger System::logger = Logger();
 
 void System::parse_arg(int argc, char **argv) {
     for (int i = 1; i < argc; ++i) {
@@ -13,17 +13,20 @@ void System::parse_arg(int argc, char **argv) {
                 cerr << "에러: 프로그램 인수가 잘못되었습니다.\n";
                 exit(1);
             }
-        }
-        else{
+        } else {
             source_name = argv[i];
         }
     }
-    if(source_name.empty()){
+    if (source_name.empty()) {
         cerr << "에러: 소스 파일이 주어지지 않았습니다.\n";
         exit(1);
+    }
+
+    if (output_name.empty()) {
+        output_name = source_name.substr(0, source_name.find('.') + 1) + "hex";
     }
 }
 
 void System::basm_shutdown() {
-    main_logger.flush();
+    logger.flush();
 }
