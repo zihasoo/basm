@@ -3,21 +3,18 @@
 #define BASM_LEXER_H
 
 #include <fstream>
-#include <iostream>
 #include <string>
+#include <vector>
 #include <utility>
 #include <set>
 
-class Lexer {
-    int lastChar = ' ';
-    std::string lastWord;
-    std::istream *inputSource;
-    std::pair<int, int> curLocation = {1, 1}; //row, col
-    std::set<std::string> unaryOpSet = {"++", "--"};
-    std::set<std::string> binaryOpSet = {"*", "/", "%", "+", "-", "<", ">",">=","<=", "==", "!=", "+=", "-=", "*=", "/=", "%=", ":=" };
-    std::set<std::string> etcOpSet = {"(", ")", "[", "]", "{", "}", "->", ".", ",", ";", "\"","\'","\\"};
+using std::string;
+using std::vector;
+using std::ifstream;
+using std::pair;
+using std::set;
 
-    void advance(); //현재 입력 스트림에서 한 글자 얻고 위치 기록
+class Lexer {
 public:
     enum Token {
         tok_eof,
@@ -30,32 +27,48 @@ public:
         tok_identifier,
         tok_int,
 
-        // control
-        tok_if,
-        tok_else,
-        tok_for,
-        tok_in,
+        // commands
+        tok_nop,
+        tok_add,
+        tok_sub,
+        tok_cmp,
+        tok_ja,
+        tok_jb,
+        tok_je,
+        tok_jmp,
+        tok_mov,
 
         // operators
-        tok_unary,
-        tok_binary,
-        tok_etcop,
+        tok_op,
 
         //undefined
         tok_undefined
     };
 
-    static std::string tokenToString(Token token);
+    static string token_to_string(Token token);
 
-    Lexer();
+    explicit Lexer(const string &file_name);
 
-    ~Lexer();
+    Token get_token(); //현재 입력 스트림에서 토큰 타입(enum) 얻기
 
-    Token getToken(); //현재 입력 스트림에서 토큰 타입(enum) 얻기
+    string get_word(); //get_token 함수로부터 얻어진 단어 (string) 반환
 
-    std::string getWord(); //getToken 함수로부터 얻어진 단어 (string) 반환
+    pair<int, int> get_location();
 
-    std::pair<int,int> getLocation();
+    void print_symbol(Lexer::Token token);
+
+    void print_error(const string &msg);
+
+private:
+    string file_name;
+    int last_char = ' ';
+    string last_word;
+    ifstream source;
+    pair<int, int> cur_loc = {1, 1}; //row, col
+    pair<int, int> last_token_loc = {1,1};
+    set<char> op_set = {'[', ']', '$', '.', ',', ':', ';', '\"', '\''};
+
+    void advance(); //현재 입력 스트림에서 한 글자 얻고 위치 기록
 };
 
 #endif // BASM_LEXER_H

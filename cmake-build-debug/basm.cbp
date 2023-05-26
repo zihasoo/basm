@@ -88,13 +88,7 @@
 		<Unit filename="C:/Codes/C++/basm/Lexer.h">
 			<Option target="basm"/>
 		</Unit>
-		<Unit filename="C:/Codes/C++/basm/main.cpp">
-			<Option target="basm"/>
-		</Unit>
-		<Unit filename="C:/Codes/C++/basm/util.cpp">
-			<Option target="basm"/>
-		</Unit>
-		<Unit filename="C:/Codes/C++/basm/util.h">
+		<Unit filename="C:/Codes/C++/basm/basm.cpp">
 			<Option target="basm"/>
 		</Unit>
 		<Unit filename="C:/Codes/C++/basm/CMakeLists.txt">

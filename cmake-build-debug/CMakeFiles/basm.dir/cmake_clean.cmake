@@ -1,10 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/basm.dir/Lexer.cpp.obj"
   "CMakeFiles/basm.dir/Lexer.cpp.obj.d"
-  "CMakeFiles/basm.dir/main.cpp.obj"
-  "CMakeFiles/basm.dir/main.cpp.obj.d"
-  "CMakeFiles/basm.dir/util.cpp.obj"
-  "CMakeFiles/basm.dir/util.cpp.obj.d"
+  "CMakeFiles/basm.dir/basm.cpp.obj"
+  "CMakeFiles/basm.dir/basm.cpp.obj.d"
   "basm.exe"
   "basm.exe.manifest"
   "basm.pdb"

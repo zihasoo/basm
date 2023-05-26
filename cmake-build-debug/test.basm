@@ -1,0 +1,11 @@
+
+.data
+arr 1,2,3,4,5
+
+.code
+
+add a, 10
+l1: sub a, 1
+cmp a,0
+ja
+

@@ -152,53 +152,29 @@ Lexer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\basm.dir\build.make CMakeFiles/basm.dir/Lexer.cpp.s
 .PHONY : Lexer.cpp.s
 
-main.obj: main.cpp.obj
-.PHONY : main.obj
+basm.obj: basm.cpp.obj
+.PHONY : basm.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\basm.dir\build.make CMakeFiles/basm.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+basm.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\basm.dir\build.make CMakeFiles/basm.dir/basm.cpp.obj
+.PHONY : basm.cpp.obj
 
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\basm.dir\build.make CMakeFiles/basm.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\basm.dir\build.make CMakeFiles/basm.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-util.obj: util.cpp.obj
-.PHONY : util.obj
-
-# target to build an object file
-util.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\basm.dir\build.make CMakeFiles/basm.dir/util.cpp.obj
-.PHONY : util.cpp.obj
-
-util.i: util.cpp.i
-.PHONY : util.i
+basm.i: basm.cpp.i
+.PHONY : basm.i
 
 # target to preprocess a source file
-util.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\basm.dir\build.make CMakeFiles/basm.dir/util.cpp.i
-.PHONY : util.cpp.i
+basm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\basm.dir\build.make CMakeFiles/basm.dir/basm.cpp.i
+.PHONY : basm.cpp.i
 
-util.s: util.cpp.s
-.PHONY : util.s
+basm.s: basm.cpp.s
+.PHONY : basm.s
 
 # target to generate assembly for a file
-util.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\basm.dir\build.make CMakeFiles/basm.dir/util.cpp.s
-.PHONY : util.cpp.s
+basm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\basm.dir\build.make CMakeFiles/basm.dir/basm.cpp.s
+.PHONY : basm.cpp.s
 
 # Help Target
 help:
@@ -212,12 +188,9 @@ help:
 	@echo ... Lexer.obj
 	@echo ... Lexer.i
 	@echo ... Lexer.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
-	@echo ... util.obj
-	@echo ... util.i
-	@echo ... util.s
+	@echo ... basm.obj
+	@echo ... basm.i
+	@echo ... basm.s
 .PHONY : help
 
 

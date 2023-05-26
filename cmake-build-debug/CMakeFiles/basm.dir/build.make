@@ -68,19 +68,19 @@ include CMakeFiles/basm.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/basm.dir/flags.make
 
-CMakeFiles/basm.dir/main.cpp.obj: CMakeFiles/basm.dir/flags.make
-CMakeFiles/basm.dir/main.cpp.obj: C:/Codes/C++/basm/main.cpp
-CMakeFiles/basm.dir/main.cpp.obj: CMakeFiles/basm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Codes\C++\basm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/basm.dir/main.cpp.obj"
-	C:\Users\zihasoo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/basm.dir/main.cpp.obj -MF CMakeFiles\basm.dir\main.cpp.obj.d -o CMakeFiles\basm.dir\main.cpp.obj -c C:\Codes\C++\basm\main.cpp
+CMakeFiles/basm.dir/basm.cpp.obj: CMakeFiles/basm.dir/flags.make
+CMakeFiles/basm.dir/basm.cpp.obj: C:/Codes/C++/basm/basm.cpp
+CMakeFiles/basm.dir/basm.cpp.obj: CMakeFiles/basm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Codes\C++\basm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/basm.dir/basm.cpp.obj"
+	C:\Users\zihasoo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/basm.dir/basm.cpp.obj -MF CMakeFiles\basm.dir\basm.cpp.obj.d -o CMakeFiles\basm.dir\basm.cpp.obj -c C:\Codes\C++\basm\basm.cpp
 
-CMakeFiles/basm.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basm.dir/main.cpp.i"
-	C:\Users\zihasoo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Codes\C++\basm\main.cpp > CMakeFiles\basm.dir\main.cpp.i
+CMakeFiles/basm.dir/basm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basm.dir/basm.cpp.i"
+	C:\Users\zihasoo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Codes\C++\basm\basm.cpp > CMakeFiles\basm.dir\basm.cpp.i
 
-CMakeFiles/basm.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basm.dir/main.cpp.s"
-	C:\Users\zihasoo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Codes\C++\basm\main.cpp -o CMakeFiles\basm.dir\main.cpp.s
+CMakeFiles/basm.dir/basm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basm.dir/basm.cpp.s"
+	C:\Users\zihasoo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Codes\C++\basm\basm.cpp -o CMakeFiles\basm.dir\basm.cpp.s
 
 CMakeFiles/basm.dir/Lexer.cpp.obj: CMakeFiles/basm.dir/flags.make
 CMakeFiles/basm.dir/Lexer.cpp.obj: C:/Codes/C++/basm/Lexer.cpp
@@ -96,37 +96,21 @@ CMakeFiles/basm.dir/Lexer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basm.dir/Lexer.cpp.s"
 	C:\Users\zihasoo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Codes\C++\basm\Lexer.cpp -o CMakeFiles\basm.dir\Lexer.cpp.s
 
-CMakeFiles/basm.dir/util.cpp.obj: CMakeFiles/basm.dir/flags.make
-CMakeFiles/basm.dir/util.cpp.obj: C:/Codes/C++/basm/util.cpp
-CMakeFiles/basm.dir/util.cpp.obj: CMakeFiles/basm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Codes\C++\basm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/basm.dir/util.cpp.obj"
-	C:\Users\zihasoo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/basm.dir/util.cpp.obj -MF CMakeFiles\basm.dir\util.cpp.obj.d -o CMakeFiles\basm.dir\util.cpp.obj -c C:\Codes\C++\basm\util.cpp
-
-CMakeFiles/basm.dir/util.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basm.dir/util.cpp.i"
-	C:\Users\zihasoo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Codes\C++\basm\util.cpp > CMakeFiles\basm.dir\util.cpp.i
-
-CMakeFiles/basm.dir/util.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basm.dir/util.cpp.s"
-	C:\Users\zihasoo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Codes\C++\basm\util.cpp -o CMakeFiles\basm.dir\util.cpp.s
-
 # Object files for target basm
 basm_OBJECTS = \
-"CMakeFiles/basm.dir/main.cpp.obj" \
-"CMakeFiles/basm.dir/Lexer.cpp.obj" \
-"CMakeFiles/basm.dir/util.cpp.obj"
+"CMakeFiles/basm.dir/basm.cpp.obj" \
+"CMakeFiles/basm.dir/Lexer.cpp.obj"
 
 # External object files for target basm
 basm_EXTERNAL_OBJECTS =
 
-basm.exe: CMakeFiles/basm.dir/main.cpp.obj
+basm.exe: CMakeFiles/basm.dir/basm.cpp.obj
 basm.exe: CMakeFiles/basm.dir/Lexer.cpp.obj
-basm.exe: CMakeFiles/basm.dir/util.cpp.obj
 basm.exe: CMakeFiles/basm.dir/build.make
 basm.exe: CMakeFiles/basm.dir/linkLibs.rsp
 basm.exe: CMakeFiles/basm.dir/objects1
 basm.exe: CMakeFiles/basm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Codes\C++\basm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable basm.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Codes\C++\basm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable basm.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\basm.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

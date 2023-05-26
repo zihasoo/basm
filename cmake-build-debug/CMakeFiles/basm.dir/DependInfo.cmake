@@ -9,8 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Codes/C++/basm/Lexer.cpp" "CMakeFiles/basm.dir/Lexer.cpp.obj" "gcc" "CMakeFiles/basm.dir/Lexer.cpp.obj.d"
-  "C:/Codes/C++/basm/main.cpp" "CMakeFiles/basm.dir/main.cpp.obj" "gcc" "CMakeFiles/basm.dir/main.cpp.obj.d"
-  "C:/Codes/C++/basm/util.cpp" "CMakeFiles/basm.dir/util.cpp.obj" "gcc" "CMakeFiles/basm.dir/util.cpp.obj.d"
+  "C:/Codes/C++/basm/basm.cpp" "CMakeFiles/basm.dir/basm.cpp.obj" "gcc" "CMakeFiles/basm.dir/basm.cpp.obj.d"
   )
 
 # Targets to which this target links.
