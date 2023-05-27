@@ -50,7 +50,7 @@ public:
         tok_undefined
     };
 
-    Lexer();
+    explicit Lexer(const string& source_name);
 
     Token get_token(); //현재 입력 스트림에서 토큰 타입(enum) 얻기
 

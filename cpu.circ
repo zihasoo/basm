@@ -1188,10 +1188,6 @@
     </comp>
     <comp lib="4" loc="(290,1030)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
-      <a name="contents">addr/data: 8 8
-83 c8 8b 2 32 13 0 73
-b 43 4 73 9
-</a>
     </comp>
     <comp lib="4" loc="(570,110)" name="Register">
       <a name="appearance" val="logisim_evolution"/>

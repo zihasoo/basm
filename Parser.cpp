@@ -4,7 +4,7 @@
 
 #include "Parser.h"
 
-Parser::Parser() {
+Parser::Parser(const string &source_name) : lexer(source_name) {
     result.reserve(60);
 }
 
@@ -17,7 +17,7 @@ void Parser::parse_top_level() {
         if (token == Lexer::tok_undefined) { //error
             lexer.release_error({"알 수 없는 토큰: \"", lexer.get_word(), "\""});
         } else if (token == Lexer::tok_comma || token == Lexer::tok_identifier || token == Lexer::tok_int) {
-            lexer.release_error({"잘못된 토큰: \"", lexer.get_word(), "\" 해당 토큰은 여기에 올 수 없습니다."});
+            lexer.release_error({"잘못된 토큰 \"", lexer.get_word(), "\" : 해당 토큰은 여기에 올 수 없습니다."});
         } else if (token == Lexer::tok_dollar) { //label
             parse_label();
         } else if (token == Lexer::tok_nop) { //nop
@@ -42,8 +42,8 @@ bool Parser::is_proper_regi(const string &regi_name) {
 void Parser::parse_label() {
     auto token = lexer.get_token();
     if (token != Lexer::tok_identifier) {
-        lexer.release_error({"잘못된 토큰: \"", lexer.get_word(),
-                             "\" 라벨명은 다른 명령어 이름이 아니어야 하고, 숫자로 시작하지 않아야 합니다."});
+        lexer.release_error({"잘못된 토큰 \"", lexer.get_word(),
+                             "\" : 라벨명은 다른 명령어 이름이 아니어야 하고, 숫자로 시작하지 않아야 합니다."});
         return;
     }
     if (label_map.contains(lexer.get_word())) {
@@ -58,7 +58,8 @@ void Parser::parse_jmp(Lexer::Token token) {
     result.push_back((token << 4) + 3); //jmp들은 항상 src가 imm이어야해서 + 3을 하는 것
     token = lexer.get_token(); //라벨 파싱
     if (token != lexer.tok_identifier) {
-        lexer.release_error({"잘못된 토큰: \"", lexer.get_word(), "\" 라벨이 필요합니다."});
+        lexer.release_error({"잘못된 토큰 \"", lexer.get_word(), "\" : 라벨이 필요합니다."});
+        return;
     }
     if (label_map.contains(lexer.get_word())) { //등록된 라벨이면 바로 값 대입
         result.push_back(label_map[lexer.get_word()]);
@@ -75,7 +76,7 @@ void Parser::parse_command(Lexer::Token token) {
 
     token = lexer.get_token();
     if (token == Lexer::tok_int) {
-        lexer.release_error({"dest는 즉시값이 될 수 없습니다."});
+        lexer.release_error({"dest에는 즉시값이 들어갈 수 없습니다."});
         return;
     }
     if (!is_proper_regi(lexer.get_word())) return;
@@ -83,7 +84,7 @@ void Parser::parse_command(Lexer::Token token) {
 
     token = lexer.get_token();
     if (token != Lexer::tok_comma) {
-        lexer.release_error({"잘못된 토큰: \"", lexer.get_word(), "\" 이곳엔 콤마가 와야 합니다."});
+        lexer.release_error({"잘못된 토큰 \"", lexer.get_word(), "\" : 이곳엔 콤마가 와야 합니다."});
         return;
     }
 
@@ -100,7 +101,7 @@ void Parser::parse_command(Lexer::Token token) {
         result.push_back((command << 4) + ((dest - 'a') << 2) + 3);
         result.push_back(val);
     } else {
-        lexer.release_error({"잘못된 토큰: \"", lexer.get_word(), "\" src에는 값 또는 레지스터가 와야 합니다."});
+        lexer.release_error({"잘못된 토큰 \"", lexer.get_word(), "\" : src에는 값 또는 레지스터가 와야 합니다."});
     }
 }
 

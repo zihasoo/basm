@@ -25,6 +25,8 @@ void System::parse_arg(int argc, char **argv) {
     if (output_name.empty()) {
         output_name = source_name.substr(0, source_name.find('.') + 1) + "hex";
     }
+
+    logger.set_source(source_name);
 }
 
 void System::basm_shutdown() {

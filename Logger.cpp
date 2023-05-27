@@ -38,7 +38,7 @@ void Logger::flush() {
     while (!buffer.empty()) {
         auto info = buffer.top();
         buffer.pop();
-        cerr << System::source_name << ' ' << info.raw << ':' << info.col << ": 에러: " << info.msg << '\n';
+        cerr << source_name << ' ' << info.raw << ':' << info.col << ": 에러: " << info.msg << '\n';
         cerr.width(5);
         cerr << info.raw << " | " << line_map[info.raw] << '\n'
              << "      | " << indent_by_count(info.col - 1) << "^"
@@ -48,5 +48,9 @@ void Logger::flush() {
 
 bool Logger::has_error() {
     return !buffer.empty();
+}
+
+void Logger::set_source(const string &name) {
+    source_name = name;
 }
 

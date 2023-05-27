@@ -30,6 +30,8 @@ public:
         }
     };
 
+    void set_source(const string& name);
+
     void log_error(pair<int, int> loc, int word_size, const string &msg);
 
     void log_error(const LogInfo &log_info);
@@ -41,6 +43,8 @@ public:
     bool has_error();
 
 private:
+    string source_name;
+
     priority_queue<LogInfo, std::vector<LogInfo>, std::greater<>> buffer;
 
     map<int, string> line_map;

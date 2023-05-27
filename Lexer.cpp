@@ -2,7 +2,7 @@
 #include "Logger.h"
 #include "System.h"
 
-Lexer::Lexer() : source(System::source_name) {
+Lexer::Lexer(const string& source_name) : source(source_name) {
     last_word.reserve(30);
     cur_line.reserve(80);
     if (!source.is_open()) {

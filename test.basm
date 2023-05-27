@@ -1,0 +1,9 @@
+
+
+mov a, 200 ; a <- 200
+mov c, 2 ; c <- 2
+$l1
+sub a, c
+cmp a, 0
+
+ja l1

@@ -14,7 +14,7 @@ using std::map;
 
 class Parser {
 public:
-    Parser();
+    Parser(const string& source_name);
 
     void parse_top_level(); //최상위 파싱. 어떤 구문인지 먼저 판단
 
