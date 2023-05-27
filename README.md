@@ -10,6 +10,8 @@ basm
 
 [![Video Label](http://img.youtube.com/vi/pB1YIJpi5VE/0.jpg)](https://youtu.be/pB1YIJpi5VE)
 
+어셈블러 컴파일은 CMake 사용해서 하면 됨. C++20 사용해야함. 어셈블리 파일 확장자는 상관없음.
+
 #### cpu instruction
 
 - 크기: 8bit
