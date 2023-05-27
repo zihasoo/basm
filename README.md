@@ -8,7 +8,7 @@ basm
 
 #### 어셈블링 및 실행 영상
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pB1YIJpi5VE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Video Label](http://img.youtube.com/vi/pB1YIJpi5VE/0.jpg)](https://youtu.be/pB1YIJpi5VE)
 
 #### cpu instruction
 
@@ -95,13 +95,12 @@ mov, sub, ja 등 x86 어셈블리와 네이밍이 모두 같음. 대소문자 �
 
 lexer가 읽어오는 토큰을 모두 log_error로 넘겨서 토큰을 제대로 읽어왔는지 확인하는 영상.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VgtUffM4Q6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Video Label](http://img.youtube.com/vi/VgtUffM4Q6g/0.jpg)](https://youtu.be/VgtUffM4Q6g)
 
 parser의 show_code() 기능을 활용해 어셈블링 결과를 확인하는 영상
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CsG4fYsjeXQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Video Label](http://img.youtube.com/vi/CsG4fYsjeXQ/0.jpg)](https://youtu.be/CsG4fYsjeXQ)
 
 문법에 맞지 않는 어셈블리 파일을 어셈블링 했을 때 각 문맥에 맞게 에러 메시지가 제대로 나오는지 확인하는 영상 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7udyaPta5lA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+[![Video Label](http://img.youtube.com/vi/7udyaPta5lA/0.jpg)](https://youtu.be/7udyaPta5lA)
