@@ -6,7 +6,7 @@ Lexer::Lexer(const string& source_name) : source(source_name) {
     last_word.reserve(30);
     cur_line.reserve(80);
     if (!source.is_open()) {
-        cerr << "파일이 없거나 잘못되었습니다.";
+        cerr << "에러: 소스 파일이 존재하지 않거나 잘못되었습니다..";
         exit(1);
     }
 }
