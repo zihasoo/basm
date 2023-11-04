@@ -60,7 +60,7 @@ public:
 
     pair<int, int> get_token_loc(); //last_token_loc getter
 
-    void release_error(const initializer_list<string>& msg);
+    void release_error(const initializer_list<std::string_view>& msg);
 
     static string token_to_string(Token token);
 

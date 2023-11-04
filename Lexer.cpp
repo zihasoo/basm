@@ -6,7 +6,7 @@ Lexer::Lexer(const string& source_name) : source(source_name) {
     last_word.reserve(30);
     cur_line.reserve(80);
     if (!source.is_open()) {
-        cerr << "파일이 없거나 잘못되었습니다.";
+        cerr << "\"" << source_name << "\" 파일이 존재하지 않습니다.";
         exit(1);
     }
 }
@@ -26,7 +26,7 @@ bool Lexer::advance() {
     }
 }
 
-void Lexer::release_error(const initializer_list<string> &msg) {
+void Lexer::release_error(const initializer_list<std::string_view> &msg) {
     //매모리의 반복 재할당을 막기 위해 initializer_list로 받고 한 번에 할당
     string str;
     int size = 0;
